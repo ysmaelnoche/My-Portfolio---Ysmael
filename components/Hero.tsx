@@ -225,7 +225,7 @@ export default function Hero() {
                 <img 
                   src="/projects/my-image.png" 
                   alt="Ysmael Noche" 
-                  className="w-full h-full object-cover object-[center_35%]"
+                  className="w-full h-full object-cover object-[center_20%]"
                 />
                 
                 {/* Hover effect */}
