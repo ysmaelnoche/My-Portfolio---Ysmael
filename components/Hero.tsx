@@ -220,12 +220,12 @@ export default function Hero() {
               <motion.div
                 whileHover={{ scale: 1.05, rotate: 5 }}
                 transition={{ type: "spring", stiffness: 300 }}
-                className="absolute inset-6 sm:inset-8 rounded-full shadow-2xl overflow-hidden relative group cursor-pointer"
+                className="absolute inset-6 sm:inset-8 rounded-full shadow-2xl overflow-hidden relative group cursor-pointer bg-black"
               >
                 <img 
                   src="/projects/my-image.png" 
                   alt="Ysmael Noche" 
-                  className="w-full h-full object-cover object-center"
+                  className="w-full h-full object-contain"
                 />
                 
                 {/* Hover effect */}
