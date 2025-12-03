@@ -84,13 +84,20 @@ export default function Navigation() {
             <a
               key={item.name}
               href={item.href}
-              onClick={(e) => {
-                e.preventDefault();
+              onClick={() => {
                 setIsMobileMenuOpen(false);
-                const target = document.querySelector(item.href);
-                if (target) {
-                  target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
+                setTimeout(() => {
+                  const element = document.getElementById(item.href.replace('#', ''));
+                  if (element) {
+                    const offset = 80;
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - offset;
+                    window.scrollTo({
+                      top: offsetPosition,
+                      behavior: 'smooth'
+                    });
+                  }
+                }, 300);
               }}
               className="block px-4 py-2 text-gray-700 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-gray-800 rounded-lg transition-all"
             >
