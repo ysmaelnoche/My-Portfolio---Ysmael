@@ -80,7 +80,7 @@ body {
 }
 
 .gradient-text {
-  background-image: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899, #3b82f6);
+  background-image: linear-gradient(90deg, #3b82f6, #1e40af, #0ea5e9, #3b82f6);
   background-size: 200% auto;
   -webkit-background-clip: text;
   background-clip: text;

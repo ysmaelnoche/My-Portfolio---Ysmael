@@ -65,7 +65,7 @@ const achievements = [
 
 export default function Certificates() {
   return (
-    <section id="certificates" className="section-container bg-white dark:bg-gray-900 transition-colors duration-500">
+    <section id="certificates" className="section-container bg-white dark:bg-gray-900 transition-colors duration-500 relative z-10">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}

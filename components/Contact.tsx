@@ -58,7 +58,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="section-container bg-gradient-to-b from-white to-blue-50 dark:from-gray-800 dark:to-gray-900 transition-colors duration-500">
+    <section id="contact" className="section-container bg-gradient-to-b from-white to-blue-50 dark:from-gray-800 dark:to-gray-900 transition-colors duration-500 relative z-10">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
