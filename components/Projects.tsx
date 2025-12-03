@@ -61,7 +61,7 @@ export default function Projects() {
   const [activeProject, setActiveProject] = useState<number | null>(null);
 
   return (
-    <section id="projects" className="section-container bg-gradient-to-b from-blue-50 to-white dark:from-gray-900 dark:to-gray-800 transition-colors duration-500">
+    <section id="projects" className="section-container bg-gradient-to-b from-blue-50 to-white dark:from-gray-900 dark:to-gray-800 transition-colors duration-500 relative z-10">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}

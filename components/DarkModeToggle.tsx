@@ -32,25 +32,34 @@ export default function DarkModeToggle() {
       
       setTimeout(() => {
         setIsTransitioning(false);
-      }, 500);
-    }, 300);
+      }, 600);
+    }, 50);
   };
 
   return (
     <>
-      {/* Transition overlay */}
+      {/* Transition overlay - Top to Bottom for Dark, Bottom to Top for Light */}
       <AnimatePresence>
         {isTransitioning && (
           <motion.div
-            initial={{ scale: 0, borderRadius: '50%' }}
-            animate={{ scale: 3, borderRadius: '0%' }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.6, ease: 'easeInOut' }}
-            className="fixed inset-0 z-[9999] pointer-events-none"
+            initial={{ 
+              y: isDark ? '-100%' : '100%'
+            }}
+            animate={{ 
+              y: 0
+            }}
+            exit={{ 
+              opacity: 0
+            }}
+            transition={{ 
+              duration: 0.7, 
+              ease: [0.43, 0.13, 0.23, 0.96]
+            }}
+            className="fixed inset-0 z-0 pointer-events-none"
             style={{
               background: isDark 
-                ? 'radial-gradient(circle, #1e293b 0%, #0f172a 100%)'
-                : 'radial-gradient(circle, #e0f2fe 0%, #f8fafc 100%)',
+                ? 'linear-gradient(180deg, #0f172a 0%, #1e293b 50%, #334155 100%)'
+                : 'linear-gradient(180deg, #ffffff 0%, #f1f5f9 50%, #e0f2fe 100%)',
             }}
           />
         )}
@@ -64,7 +73,7 @@ export default function DarkModeToggle() {
         whileHover={{ scale: 1.1, rotate: 180 }}
         whileTap={{ scale: 0.9 }}
         transition={{ type: 'spring', stiffness: 300 }}
-        className="fixed bottom-6 right-6 sm:bottom-8 sm:right-8 z-50 w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-blue-500 to-purple-600 dark:from-purple-600 dark:to-blue-500 rounded-full shadow-lg hover:shadow-2xl flex items-center justify-center text-white"
+        className="fixed bottom-6 right-6 sm:bottom-8 sm:right-8 z-50 w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-blue-600 to-blue-800 dark:from-slate-700 dark:to-blue-900 rounded-full shadow-lg hover:shadow-2xl flex items-center justify-center text-white"
         aria-label="Toggle dark mode"
       >
         <AnimatePresence mode="wait">
