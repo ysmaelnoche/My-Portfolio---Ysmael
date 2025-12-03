@@ -179,7 +179,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="relative flex justify-center items-start md:justify-start md:-mt-16"
           >
-            <div className="relative w-64 h-80 sm:w-72 sm:h-96 md:w-72 md:h-72 lg:w-80 lg:h-80">
+            <div className="relative w-64 h-[28rem] sm:w-72 sm:h-[32rem] md:w-72 md:h-72 lg:w-80 lg:h-80">
               {/* Decorative animated rings */}
               <motion.div
                 animate={{ rotate: 360 }}
