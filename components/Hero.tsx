@@ -179,7 +179,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="relative flex justify-center items-start md:justify-start md:-mt-16"
           >
-            <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-72 md:h-72 lg:w-80 lg:h-80">
+            <div className="relative w-64 h-80 sm:w-72 sm:h-96 md:w-72 md:h-72 lg:w-80 lg:h-80">
               {/* Decorative animated rings */}
               <motion.div
                 animate={{ rotate: 360 }}
@@ -220,12 +220,12 @@ export default function Hero() {
               <motion.div
                 whileHover={{ scale: 1.05, rotate: 5 }}
                 transition={{ type: "spring", stiffness: 300 }}
-                className="absolute inset-6 sm:inset-8 rounded-full shadow-2xl overflow-hidden relative group cursor-pointer bg-black"
+                className="absolute inset-6 sm:inset-8 rounded-[50%] shadow-2xl overflow-hidden relative group cursor-pointer bg-black"
               >
                 <img 
                   src="/projects/my-image.png" 
                   alt="Ysmael Noche" 
-                  className="w-full h-full object-contain"
+                  className="w-full h-full object-cover object-center"
                 />
                 
                 {/* Hover effect */}
