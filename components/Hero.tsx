@@ -69,18 +69,19 @@ export default function Hero() {
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-start">
+        <div className="grid md:grid-cols-2 gap-12 md:gap-12 items-center md:items-start">
           {/* Left side - Text content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
+            className="order-2 md:order-1"
           >
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold mb-4 text-gray-900 dark:text-white"
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-gray-900 dark:text-white"
             >
               Flourdfiel Ysmael Noche
             </motion.h1>
@@ -177,9 +178,9 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="relative flex justify-center items-start md:justify-start md:-mt-16"
+            className="relative flex justify-center items-center order-1 md:order-2 md:justify-start md:-mt-16"
           >
-            <div className="relative w-56 h-56 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80">
+            <div className="relative w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-80 lg:h-80">
               {/* Decorative animated rings */}
               <motion.div
                 animate={{ rotate: 360 }}
@@ -225,7 +226,7 @@ export default function Hero() {
                 <img 
                   src="/projects/my-image.png" 
                   alt="Ysmael Noche" 
-                  className="w-full h-full object-cover object-[center_40%]"
+                  className="w-full h-full object-cover object-center"
                 />
                 
                 {/* Hover effect */}
