@@ -17,8 +17,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth dark:bg-gray-900">
-      <body className={`${inter.className} bg-white dark:bg-gray-900`}>
+    <html lang="en" className="scroll-smooth dark:bg-gray-900 overflow-x-hidden">
+      <body className={`${inter.className} bg-white dark:bg-gray-900 overflow-x-hidden`}>
         <Navigation />
         {children}
         <DarkModeToggle />
